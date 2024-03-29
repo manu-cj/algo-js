@@ -1,7 +1,6 @@
 
-
 let sum = 0;
-let iteration = 1;
+
 
 function choiceNumber(n){
     n = parseInt(window.prompt("Choisissez un nombre"));
@@ -13,3 +12,4 @@ function choiceNumber(n){
 }
 
 choiceNumber();
+
