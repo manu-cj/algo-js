@@ -12,6 +12,4 @@ if (isNaN(min) || isNaN(current) || isNaN(max)) {
     else if(min > max) {
         console.log("ça t'arrive de comprendre ce que tu lis ?");
     }
-        
-    
 }
