@@ -1,0 +1,1 @@
+- Dans cette fonction j'ai calculer la racine du pointB[0] - le pointA[0] par puissance 2 + le pointB[1] - le pointA[1] par puissance 2

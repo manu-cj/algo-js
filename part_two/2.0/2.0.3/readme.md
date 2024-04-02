@@ -1,0 +1,2 @@
+# explication de la fonction multirand
+- la fonction va créer un tableau qui contiendra un nombre d'élèment aléatoire et selon le nombre d'élement devant être insérer dans le tableau elle va boucler et insérer un nombre aléatoire à chaque passage dans la boucle
