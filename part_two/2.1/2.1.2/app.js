@@ -20,16 +20,17 @@ function createSerie(serie, date, acteur) {
 
 console.log(JSON.parse(createSerie(serie.serieName, serie.production, serie.actor)));
 
-
+actorListe = [];
 function randomizeCast(serie) {
-    actorListe = [];
 
-    for (let i = 0; i < serie[0].acteurName.length; i++) {
-        let randomActor = serie[0].acteurName[Math.floor(Math.random() * serie[0].acteurName.length)]
+    for (let i = 0; i < serie[0].acteurName.length;) {
+        if (serie[0].acteurName.length > 0) {
+            let randomActor = serie[0].acteurName[Math.floor(Math.random() * serie[0].acteurName.length)]
         if (!actorListe.includes(randomActor)) {
             actorListe.push(randomActor);
+            i++
         }
-
+        }
     }
 
     return actorListe
@@ -37,3 +38,26 @@ function randomizeCast(serie) {
 }
 
 console.log(randomizeCast(JSON.parse(createSerie(serie.serieName, serie.production, serie.actor))));
+
+
+
+function newSerie() {
+    let previousActorList = [];
+    askTvSerie();
+    randomizeCast(JSON.parse(createSerie(serie.serieName, serie.production, serie.actor)));
+    if (actorListe.length > 1) {
+        for (let i = 0; i < actorListe.length; i++) {
+            const element = actorListe[i];
+            if (!actorListe.includes(element)) {
+                actorListe.push(randomActor);
+                i++
+            }
+            
+        }
+    }
+    
+    previousActorList.push(actorListe);
+    return previousActorList
+}
+
+newSerie();
