@@ -24,6 +24,12 @@ let argent = {
     
 
 function test(price, moneyHanded) {
+if (isNaN(price) && isNaN(moneyHanded)) {
+    console.log('Faut payer avec des chiffres');
+}
+if (price > moneyHanded) {
+    console.log('Dehors Manant, on accepte seulement les gens qui ont de l\'argent !');
+} else {
     let caisse = [];
     let rend = moneyHanded - price;
     for (let type in argent) {
@@ -44,6 +50,7 @@ function test(price, moneyHanded) {
     }else {
         console.log(caisse);
     }
+}
 }
 
 console.log(test(5, 8));
