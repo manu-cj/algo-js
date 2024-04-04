@@ -18,8 +18,6 @@ let argent = {
         {0.02: [{valeur: 0.02, quantity: 1}]},
         {0.01: [{valeur: 0.01, quantity: 1}]},
 ]
-    
-    
 }
     
 
